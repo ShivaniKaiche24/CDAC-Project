@@ -1,0 +1,28 @@
+package com.app.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.app.custom_exception.InvalidCredentialsException;
+import com.app.dto.FarmerSignup;
+import com.app.dto.FarmerDto;
+
+@Service
+public interface FarmerService {
+
+	// add signup method
+	FarmerSignup farmerRegistration(FarmerSignup reqDTO);
+
+	List<FarmerDto> displayAllFarmers();
+
+
+	FarmerDto getFarmerById(Long FarmerId);
+
+
+	FarmerDto updateFarmerByEmail(String email, FarmerDto updateFarmer);
+
+
+	void deleteFarmerByEmail(String email);
+
+}
